@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Euqlid</title>
+</head>
+<body>
+	<input type="text" id='firstNum'>
+	<input type="text" id='secondNum'>
+	<input type="submit" id="but">
+	<p></p>
+	<script type="text/javascript">
+		const first = document.getElementById('firstNum'),
+			  second = document.getElementById('secondNum'),
+			  p = document.getElementsByTagName('p')[0],
+			  but = document.getElementById('but');
+but.onclick = () => 
+{
+		if (first.value > second.value) 
+		{
+			while (first.value%second.value === 0) 
+			{
+				if (first.value%second.value === 0) 
+				{
+					p.innerHTML = second.value + " - наибольший общий делитель"
+					break
+				}
+				first.value = first.value % second.value
+				console.log(first.value)
+				console.log(second.value)
+			}
+		}
+		else if (second.value > first.value) 
+		{
+			while (second.value%first.value === 0) 
+			{
+				if (second.value%first.value === 0) 
+				{
+					p.innerHTML = first.value + " - наибольший общий делитель"
+					break
+				}
+				else {
+					second.value = second.value % first.value
+					console.log(second.value)
+					continue
+				}
+			}
+		}
+		else {
+			p.innerHTML = "Числа равны."
+		}
+}
+	</script>
+</body>
+</html>

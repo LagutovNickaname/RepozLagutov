@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Password</title>
+</head>
+<body>
+	<input type="text" id="password">
+	<input type="submit" id="but">
+	<p></p>
+	<script type="text/javascript">
+		const pass = document.getElementById('password'),
+			  but = document.getElementById('but');
+		let   iter = 0,
+			  p = document.getElementsByTagName('p')[0];
+
+		but.onclick = () => 
+		{
+			if (iter<=4) 
+			{
+				if (pass.value === '108') 
+				{
+					p.innerHTML = 'Правильный пароль';
+				}
+				else 
+				{
+					while (iter<4)
+					{
+						p.innerHTML = 'Неправильный пароль';
+						iter++
+						if (iter>3)
+						{
+							p.innerHTML = 'Количество попыток истекло';
+						}
+						break
+					}
+				}
+			}
+		}
+
+	</script>
+</body>
+</html>

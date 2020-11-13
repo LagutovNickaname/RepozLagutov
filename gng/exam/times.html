@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	<input type="number" id="second">
+	<script type="text/javascript">
+		const sec = document.getElementById('second')
+		var s = 38, m = 47, h = 19;
+		let date = new Date;
+ 
+		console.log(date.getHours() + ':' + date.getMinutes() + ':' + date.getSeconds())
+
+		// sec.onchange = () => {
+			// let t = sec.value
+			let h1 = (h + date.getHours()) % 24;
+			let m1 = Math.trunc(((m + date.getMinutes()) % 60) / 10);
+			let m2 = (m + date.getMinutes()) % 60 % 10;
+			let s1 = Math.trunc((s + date.getSeconds()) % 60 / 10);
+			let s2 = (s + date.getSeconds()) % 10;
+			console.log(date.getMinutes());
+			console.log(h1)
+			console.log(m1)
+			console.log(m2)
+			console.log(s1)
+			console.log(s2)
+			console.log(h1 + ":" + m1 + m2 + ":" + s1 + s2)
+		// }
+	</script>
+</body>
+</html>

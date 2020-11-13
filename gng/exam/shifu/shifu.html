@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	<script type="text/javascript">
+		let sms = "йедюл@ьтатипсов@овоназ@онжун@ман@,овтсещбоос@еоворим@еовон@ьтадзос@ясмеарибос@ым@илсЕ@.акеволеч@ьтидорзов@еенжав@одзарог@;ыдоваз@и@ынизагам@ьтаджорзов@онжав@ьлотс@ен@яндогеС@.ьлебиг@ан@ябес@теакербо@ано@,яинатевцорп@огоньлаиретам@иинежитсод@ан@яилису@иовс@теуриртнецнок@и@агоБ@то@ястеавичаровто@одрог@яицан@адгоК@:ОКСЕНЮ@яинадесаз@с@акилпеР"
+		sms = sms.split('@').reverse()
+		let smsRev = []
+		let i=0
+		while (i<sms.length) {
+				smsRev.push(sms[i].split('').reverse().join(''))
+		i++
+		}
+	console.log(smsRev.join(' '))
+	</script>
+</body>
+</html>

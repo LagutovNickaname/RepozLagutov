@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<style type="text/css">
+		html, body {
+			height: 100%;
+			width: 100%;
+			margin: 0;
+			padding: 0;
+		}
+		body {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+		#Pole {
+			height: 500px;
+			width: 500px;
+			border: 1px solid black;
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-around;
+			align-items: center;
+		}
+		.yacheyka {
+			width: 150px;
+			height: 150px;
+			background-color: black;
+		}
+	</style>
+</head>
+<body>
+
+	<div id="Pole">
+		<div class="yacheyka"></div>
+		<div class="yacheyka"></div>
+		<div class="yacheyka"></div>
+		<div class="yacheyka"></div>
+		<div class="yacheyka"></div>
+		<div class="yacheyka"></div>
+		<div class="yacheyka"></div>
+		<div class="yacheyka"></div>
+		<div class="yacheyka"></div>
+	</div>
+	<script type="text/javascript">
+		const td = document.getElementsByClassName('yacheyka');
+		function Random() {
+			let rslt = Math.floor(Math.random()*3);
+		}
+		switch(rslt) {
+			case 0:
+			td.style = "background-color: red"
+			break
+			case 1:
+			td.style = "background-color: green"
+			break
+			case 2:
+			td.style = "background-color: blue"
+			break
+		}
+		td.onclick = () => {
+
+		}
+	</script>
+</body>
+</html>

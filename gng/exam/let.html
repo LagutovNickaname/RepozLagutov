@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	<input type="number">
+
+	<script type="text/javascript">
+		let in1 = document.getElementsByTagName('input')[0];
+		let years = 0;
+		const cs = [2,0,1,1,1,2]
+		const yr = ['год', 'года', 'лет']
+
+		in1.onchange = () => {
+			// years = in1.value;
+			// if (years%100>4 && years%100<20) {
+			// 	console.log(years+' лет');
+			// }
+			// else if (years%10==1) {
+			// 	console.log(years+' год');
+			// }
+			// else if (years%10 && years%10==1) {
+			// 	console.log(years+' года');
+			// } else {
+			// 	console.log(years+' лет');
+			// }
+			console.log(years+' '+yr[ (years%100>4 && years%100<20)? 2 : cs[(years%10<5)?years%10:5] ]);
+
+		}
+
+		// function uid(entropy) {
+		// 	let e = (Math.random()*Date.now())+(Math.random()*1000+1)
+		// 	return (entropy*e%Date.now()).toString(16).substring(0,8)
+		// }
+		
+	</script>
+</body>
+</html>

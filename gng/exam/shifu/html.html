@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	<script type="text/javascript">
+		// let sms = "йедюл@ьтатипсов@овоназ@онжун@ман@,овтсещбоос@еоворим@еовон@ьтадзос@ясмеарибос@ым@илсЕ@.акеволеч@ьтидорзов@еенжав@одзарог@;ыдоваз@и@ынизагам@ьтаджорзов@онжав@ьлотс@ен@яндогеС@.ьлебиг@ан@ябес@теакербо@ано@,яинатевцорп@огоньлаиретам@иинежитсод@ан@яилису@иовс@теуриртнецнок@и@агоБ@то@ястеавичаровто@одрог@яицан@адгоК@:ОКСЕНЮ@яинадесаз@с@акилпеР"
+
+		// let spl = sms.split('@').reverse();
+		// let rev = [];
+		// let i=0;
+		// while (i<spl.length) {
+			
+		// 	rev.push(spl[i].split('').reverse().join(''));
+		// 	i++;
+		// }
+
+		// console.log(rev.join(' '));
+
+		let msg = "abc";
+		let key = 0x64;
+
+		function encode(msg, key) {
+			let a = [];
+
+			for (let i = 0; i < msg.length; i++) {
+				a.push(key^msg.charCodeAt(i))
+			}
+			a = Number(a.join(''));
+			return btoa(a);			
+		}
+
+		function decode(msg, key) {
+			let tmp = atob(msg);
+			msg = atob(msg);
+			let a=[];
+			let b=[];
+
+			if (msg.length==1) {
+				msg = msg%256
+				return String.fromCharCode(key^msg);
+			} else {
+				b.push((msg%256));
+				for (let i=1; i < Math.log2(tmp); i++) {
+					b.push(msg/256**i%256);
+				}
+				a.push(String.fromCharCode(key^msg))
+			}
+			return a.join('');
+		}
+
+		let c = encode(msg, key);
+
+		console.log(c);
+
+
+		console.log(decode(c, key));
+	</script>
+</body>
+</html>
