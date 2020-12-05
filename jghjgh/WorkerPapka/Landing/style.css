@@ -1,0 +1,45 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+html, body {
+	height: 100%;
+	width: 100%;
+}
+#osn {
+	height: 80px;
+	width: 100%;
+	background-color: grey;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	font-size: 30px;
+}
+a {
+	text-decoration: none;
+	color: black;
+	padding: 6px;
+}
+a:hover {
+	color: white;
+}
+
+#main {
+	height: 92%;
+	width: 100%;
+	background-color: #525252;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+.but {
+	font-size: 50px;
+	padding: 5px;
+	border-radius: 20px;
+	transition: 0.2s;
+}
+.but:hover {
+	background-color: grey;
+	background: none;
+}

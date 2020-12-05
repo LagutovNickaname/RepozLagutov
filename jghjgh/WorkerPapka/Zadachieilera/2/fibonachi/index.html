@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link rel="stylesheet" href="C:\PracticWorker\WorkerPapka\Zadachieilera\home.css">
+	<link rel="stylesheet" type="text/css" href="C:\PracticWorker\WorkerPapka\Zadachieilera">
+</head>
+<body>
+	<header>
+		<a href="C:\PracticWorker\WorkerPapka\Landing\index.html" id="home"><img src="C:\PracticWorker\WorkerPapka\home.png" alt=""></a>
+		<a href="C:\PracticWorker\WorkerPapka\Zadachieilera\index.html"><img src="C:\PracticWorker\WorkerPapka\Zadachieilera\arrow.png" alt="Назад"></a>
+	</header>
+	<div id="mesto">
+        Откройте консоль
+    </div>
+	<script type="text/javascript">
+		var x = 1, x2 = 1, res = 1; sum = 0;
+
+		do {
+			res = x + x2
+			x = x2
+			x2 = res
+			if (res%2 == 0) {
+				sum += res;		
+			}	
+		} while (res<4000000)
+		console.log(sum);
+	</script>
+</body>
+</html>
